@@ -32,4 +32,4 @@ labels: ['task', 'ready']
 
 ## Notes
 
-<!-- Implementation hints, links to specs (.specify/ or docs/), design references. -->
+<!-- Implementation hints, links to specs (docs/ or the spec in the linked issue), design references. -->

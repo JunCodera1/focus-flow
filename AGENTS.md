@@ -31,7 +31,7 @@ See `README.md` (structure) and `CONTRIBUTING.md` (conventions). Stay within the
 
 ## Spec-driven development
 
-Features are specified with GitHub Spec Kit (`.specify/`, slash commands in `.claude/commands/`). Follow the spec → plan → tasks → implement flow described in `docs/TEAM_WORKFLOW.md` when a spec exists for the work.
+Features are specified with GitHub Spec Kit. Its working files (`.specify/`) and Claude Code configuration (`.claude/`) are kept local and are not committed; set them up on your machine with `specify init . --integration claude` (see `README.md`). Follow the spec → plan → tasks → implement flow described in `docs/TEAM_WORKFLOW.md` when a spec exists for the work.
 
 ## Navigation & Routing
 

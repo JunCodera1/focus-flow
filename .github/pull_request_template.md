@@ -16,6 +16,7 @@
 
 - [ ] Ran on Android (Expo Go or development build)
 - [ ] Ran on iOS (Expo Go or development build)
+- [ ] QC tested on Android and iOS, results noted in the PR
 - [ ] Tested the empty, loading, and error states where relevant
 
 ## Checklist

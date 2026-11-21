@@ -148,8 +148,6 @@ focus-flow/
 │       └── review/             # components/, hooks/, services/, types/
 ├── docs/                       # Team documentation
 ├── .github/                    # PR and issue templates
-├── .specify/                   # GitHub Spec Kit configuration and templates
-├── .claude/                    # Claude Code configuration and Spec Kit skills
 ├── assets/                     # Icons and splash images
 ├── app.json                    # Expo configuration
 ├── eslint.config.js
@@ -163,28 +161,31 @@ Route files in `app/` should stay thin: they import components and hooks from `s
 
 ## Spec-Driven Development
 
-New features are specified before they are built, using [GitHub Spec Kit](https://github.com/github/spec-kit). The project is already initialized for Claude Code (`.claude/skills/speckit-*`).
+New features are specified before they are built, using [GitHub Spec Kit](https://github.com/github/spec-kit). Spec Kit's working files (`.specify/`) and Claude Code configuration (`.claude/`) are **not committed** to this repository; each developer sets them up locally.
 
 Typical flow inside Claude Code:
 
-| Step | Command                                  | Output                                                                                                       |
-| ---- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| 1    | `/speckit-constitution`                  | Project principles in `.specify/memory/constitution.md` (already filled in; update only with team agreement) |
-| 2    | `/speckit-specify <feature description>` | Feature spec                                                                                                 |
-| 3    | `/speckit-clarify` _(optional)_          | Resolves ambiguities in the spec                                                                             |
-| 4    | `/speckit-plan`                          | Implementation plan                                                                                          |
-| 5    | `/speckit-tasks`                         | Ordered task list                                                                                            |
-| 6    | `/speckit-analyze` _(optional)_          | Consistency check across spec, plan, and tasks                                                               |
-| 7    | `/speckit-implement`                     | Implements the tasks                                                                                         |
+| Step | Command                                  | Output                                                                                           |
+| ---- | ---------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| 1    | `/speckit-constitution`                  | Project principles in `.specify/memory/constitution.md` (local; update only with team agreement) |
+| 2    | `/speckit-specify <feature description>` | Feature spec                                                                                     |
+| 3    | `/speckit-clarify` _(optional)_          | Resolves ambiguities in the spec                                                                 |
+| 4    | `/speckit-plan`                          | Implementation plan                                                                              |
+| 5    | `/speckit-tasks`                         | Ordered task list                                                                                |
+| 6    | `/speckit-analyze` _(optional)_          | Consistency check across spec, plan, and tasks                                                   |
+| 7    | `/speckit-implement`                     | Implements the tasks                                                                             |
 
 Other optional commands: `/speckit-checklist` (requirement quality checklist) and `/speckit-converge` (assess the codebase and append remaining work as tasks).
 
-To set up Spec Kit on a new machine it is **not required** — the generated files are committed. Only the CLI is needed to re-initialize or upgrade:
+Set up Spec Kit once on your machine, from the project root:
 
 ```bash
 uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+specify init . --integration claude --force
 specify check
 ```
+
+Use `--force` only in this project folder; it does not change committed files.
 
 ## Team collaboration
 

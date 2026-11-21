@@ -4,11 +4,11 @@
 
 ## Spec-driven development
 
-This project uses GitHub Spec Kit. Slash commands are installed as skills in `.claude/skills/speckit-*`:
+This project uses GitHub Spec Kit. Its files (`.specify/`, `.claude/skills/speckit-*`) are local-only and not committed. If they are missing on your machine, run `specify init . --integration claude` first (see `README.md`). Slash commands:
 
 `/speckit-constitution` → `/speckit-specify` → (`/speckit-clarify`) → `/speckit-plan` → `/speckit-tasks` → (`/speckit-analyze`) → `/speckit-implement`
 
-- Project principles: `.specify/memory/constitution.md`. Follow them; propose changes to the team rather than editing them silently.
+- Project principles: `.specify/memory/constitution.md` (local copy). Follow them; propose changes to the team rather than editing them silently.
 - Before implementing a feature, check for its spec under `specs/` (or the path given in the issue).
 
 ## Scope rules for agents
