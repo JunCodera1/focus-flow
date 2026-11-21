@@ -50,3 +50,6 @@ Desktop.ini
 
 # Per-developer Claude Code settings (shared settings in .claude/settings.json are committed)
 .claude/settings.local.json
+
+# Spec Kit working directory (kept local, not shared on GitHub)
+.specify/
