@@ -54,7 +54,7 @@ Use `fix/<issue-name>` for bugs and `docs/<description>` for documentation.
 - Change files inside your feature folder and the route files for your feature.
 - Changes to shared files (`src/components/ui/`, `src/constants/theme.ts`, `app/_layout.tsx`, `app/(tabs)/_layout.tsx`, `package.json`, `app.json`) need a note in the issue first. See [CONTRIBUTING §8](../CONTRIBUTING.md#8-avoiding-conflicts).
 - Do not reformat or refactor code outside your change.
-- If you are using Claude Code, start it from the project root so it reads `CLAUDE.md` and `AGENTS.md`. For a feature that has a spec, use the Spec Kit flow (`/speckit-specify` → `/speckit-plan` → `/speckit-tasks` → `/speckit-implement`).
+- If you are using Claude Code, first set up Spec Kit locally (`specify init . --integration claude --force`, see `README.md`), then start Claude Code from the project root so it reads `CLAUDE.md` and `AGENTS.md`. For a feature that has a spec, use the Spec Kit flow (`/speckit-specify` → `/speckit-plan` → `/speckit-tasks` → `/speckit-implement`).
 
 While you work, run the checks often:
 
