@@ -53,3 +53,6 @@ Desktop.ini
 
 # Spec Kit working directory (kept local, not shared on GitHub)
 .specify/
+
+# Claude Code configuration folder (kept local, not shared on GitHub)
+.claude/
