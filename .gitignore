@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Expo / Metro build artifacts
+.expo/
+dist/
+web-build/
+.metro-health-check*
+expo-env.d.ts
+
+# Generated native projects (Continuous Native Generation: never commit by hand)
+/ios
+/android
+
+# Native build and signing material
+.kotlin/
+*.orig.*
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.pem
+*.mobileprovision
+
+# Environment files and local secrets (never commit)
+.env
+.env.*
+!.env.example
+*.local
+
+# Test and tooling output
+coverage/
+*.tsbuildinfo
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Per-developer Claude Code settings (shared settings in .claude/settings.json are committed)
+.claude/settings.local.json
